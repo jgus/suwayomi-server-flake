@@ -25,7 +25,7 @@
     flake-utils.lib.eachDefaultSystem (system:
       let
         pkgs = import nixpkgs { inherit system; };
-        jdk = flake-lib.lib.warnIfNewerMajor { inherit pkgs; name = "jdk21_headless"; };
+        jdk = flake-lib.lib.warnIfNewerMajor { inherit pkgs; name = "jdk25_headless"; };
 
         src = pkgs.fetchurl {
           url = "https://github.com/${source.owner}/${source.repo}/releases/download/v${version}/Suwayomi-Server-v${version}.jar";
